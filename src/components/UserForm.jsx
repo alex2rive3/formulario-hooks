@@ -1,4 +1,5 @@
 import React from "react";
+import { BoxStyled, Label, Input } from "./BoxStyled";
 
 const UserForm = (props) => {
     const { inputs, setInputs } = props;
@@ -10,26 +11,26 @@ const UserForm = (props) => {
     };
     return (
         <form>
-            <div>
-                <label>First Name: </label>
-                <input name="firstName" onChange={cargar} type="text" />
-            </div>
-            <div>
-                <label>Last Name: </label>
-                <input name="lastName" onChange={cargar} type="text" />
-            </div>
-            <div>
-                <label>Email: </label>
-                <input name="email" onChange={cargar} type="email" />
-            </div>
-            <div>
-                <label>Password: </label>
-                <input name="password" onChange={cargar} type="password" />
-            </div>
-            <div>
-                <label>Confirm Password: </label>
-                <input name="confPassword" onChange={cargar} type="password" />
-            </div>
+            <BoxStyled>
+                <Label>First Name: </Label>
+                <Input name="firstName" onChange={cargar} type="text" />
+            </BoxStyled>
+            <BoxStyled>
+                <Label>Last Name: </Label>
+                <Input name="lastName" onChange={cargar} type="text" />
+            </BoxStyled>
+            <BoxStyled>
+                <Label>Email: </Label>
+                <Input name="email" onChange={cargar} type="email" />
+            </BoxStyled>
+            <BoxStyled>
+                <Label>Password: </Label>
+                <Input name="password" onChange={cargar} type="password" />
+            </BoxStyled>
+            <BoxStyled>
+                <Label>Confirm Password: </Label>
+                <Input name="confPassword" onChange={cargar} type="password" />
+            </BoxStyled>
         </form>
     );
 };
